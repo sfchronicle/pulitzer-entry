@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title><%= json.project.seo_title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="__sync_contentCategory" content="meterA">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flickity@1.2/dist/flickity.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://npmcdn.com/flickity@1.2/dist/flickity.pkgd.js"></script>
+
+    <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %>
+
+    <%= t.include("partials/_head.html") %>
+
+  </head>
+
+  <%= !json.project.embedded ? "<body>" : "<body is='responsive-body'>" %>
+
+    <%= t.include("partials/_nav.html") %>
+
+    <div class="title-container">
+      <div class="background-photo">
+        <img src="http://ww2.hdnux.com/photos/66/46/27/14317768/3/1500x0.jpg"></img>
+        <div class="caption landing"><span class="byline">Noah Berger, The Chronicle</span></div>
+      </div>
+      <div class="title-overlay">
+        <div class="title"><%=json.pulitzer_letter_for_fires_entry.Headline%></div>
+        <div class="deck"><%=json.pulitzer_letter_for_fires_entry.Deck%></div>
+        <div class="author">By <a href="mailto:jking@sfchronicle.com"><%=json.pulitzer_letter_for_fires_entry.Author%></a></div>
+        <div class="date"><%=json.pulitzer_letter_for_fires_entry.Date%></div>
+      </div>
+    </div>
+
+
+    <% json.pulitzer_letter_for_fires_entry.text.forEach(function(d,didx){ %>
+
+      <% if (d.type == "text") { %>
+
+        <p><%=d.value %></p>
+
+      <% } else if (d.type == "photo"){ %>
+
+        <% if (d.value[0].Class == "Wide") { %>
+
+          <div class="full-width-img">
+            <img src="<%=d.value[0].PhotoID%>"></img>
+            <div class="caption"><%= d.value[0].Caption %><span class="byline"> <%= d.value[0].Photographer %></span></div>
+          </div>
+
+        <% } else if (d.value[0].Class == "Inline") { %>
+
+          <div class="inline-img-container">
+            <div class="inline-img">
+              <img src="http://ww2.hdnux.com/photos/61/64/55/<%=d.value[0].PhotoID%>/5/1500x0.jpg"></img>
+              <div class="caption"><%= d.value[0].Caption %><span class="byline"> <%= d.value[0].Photographer %></span></div>
+            </div>
+          </div>
+
+        <% } else if (d.value[0].Class == "Float-left") { %>
+
+          <div class="float-img-container">
+            <div class="float-img left">
+              <img src="http://ww2.hdnux.com/photos/61/64/55/<%=d.value[0].PhotoID%>/5/1500x0.jpg"></img>
+              <div class="caption"><%= d.value[0].Caption %><span class="byline"> <%= d.value[0].Photographer %></span></div>
+            </div>
+          </div>
+
+        <% } else if (d.value[0].Class == "Float-right") { %>
+
+          <div class="float-img-container">
+            <div class="float-img right">
+              <img src="http://ww2.hdnux.com/photos/61/64/55/<%=d.value[0].PhotoID%>/5/1500x0.jpg"></img>
+              <div class="caption"><%= d.value[0].Caption %><span class="byline"> <%= d.value[0].Photographer %></span></div>
+            </div>
+          </div>
+
+        <% } %>
+
+      <% } else if ( d.type == 'slideshow' ){ %>
+
+          <div class="carousel slideshow js-flickity" data-flickity-options='{ "imagesLoaded": true }'>
+            <% d.value.forEach(function(slide) { %>
+
+             <div class="carousel-cell">
+              <img src="<%= slide.image %>">
+              <div class="caption"><%= slide.caption %> <span class="byline"><%= slide.credit %></span></div>
+            </div>
+
+            <% }); %>
+
+          </div>
+
+      <% } else if (d.type == "bythenumbers"){ %>
+
+        <%= t.include("partials/_bythenumbers.html") %>
+
+      <% } else if (d.type == "bytheposts"){ %>
+
+        <%= t.include("partials/_bytheposts.html") %>
+
+      <% } else if (d.type == "embedtweet"){ %>
+
+        <div class="float-img-container">
+          <div class="float-img right">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/BREAKINGNEWS?src=hash&amp;ref_src=twsrc%5Etfw">#BREAKINGNEWS</a>: Two major wildfires raging overnight in Napa. Mandatory evacuations:<a href="https://t.co/nKcpaEva11">https://t.co/nKcpaEva11</a></p>&mdash; San Francisco Chronicle (@sfchronicle) <a href="https://twitter.com/sfchronicle/status/917301969454116864?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>
+          </div>
+        </div>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+      <% } else if (d.type == "visual-link"){ %>
+
+        <div class="float-img-container">
+          <div class="float-img right link-image">
+
+            <a href="<%=d.value[0].Link%>" target="_blank">
+              <img src="<%=d.value[0].Image%>"></img>
+              <div class="story-link"><i class="fa fa-external-link" aria-hidden="true"></i><%=d.value[0].Caption%></div>
+            </a>
+          </div>
+
+        </div>
+
+      <% } %>
+
+    <% }) %>
+
+    <div class="related-content-container">
+      <div class="sub-hed">Projects</div>
+      <div class="story-container sfchron">
+      <% var currentCat = "Projects" %>
+      <% json.fire_reporting_sidebars.links.forEach(function(d) { %>
+        <% if (currentCat == d.Type) { %>
+
+          <div class="story">
+            <a href="<%=d.Link%>" target="_blank">
+              <div class="photo">
+                <img src="<%=d.Photo%>"></img>
+              </div>
+              <div class="story-title"><i class="fa fa-external-link" aria-hidden="true"></i><%=d.Title%></div>
+              <!-- <div class="deck"><%=d.deck%></div> -->
+            </a>
+          </div>
+
+        <% } else { %>
+
+          <% currentCat = d.Type; %>
+          </div>
+          <div class="sub-hed"><%=d.Type%></div>
+          <div class="story-container sfchron">
+            <div class="story">
+              <a href="<%=d.Link%>" target="_blank">
+                <div class="photo">
+                  <img src="<%=d.Photo%>"></img>
+                </div>
+                <div class="story-title"><i class="fa fa-external-link" aria-hidden="true"></i><%=d.Title%></div>
+                <!-- <div class="deck"><%=d.deck%></div> -->
+              </a>
+            </div>
+        <% } %>
+
+      <% }) %>
+      </div>
+
+    </div>
+
+
+    <%= t.include("partials/_footer.html") %>
+
+    <script src="app.js" async></script>
+    <%= t.include("partials/_helloSFC.html") %>
+
+  </body>
+</html>

@@ -167,8 +167,18 @@
 
     </div>
 
+    <div id="typewriter-text"></div>
+
+    <h1>
+      <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'><span class="wrap"></span>
+      </a>
+    </h1>
 
     <%= t.include("partials/_footer.html") %>
+
+    <script>
+      var entry_text = <%= JSON.stringify(json.fire_reporting_sidebars.postupdates) %>
+    </script>
 
     <script src="app.js" async></script>
     <%= t.include("partials/_helloSFC.html") %>

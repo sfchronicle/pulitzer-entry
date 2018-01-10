@@ -21,19 +21,11 @@
 
     <%= t.include("partials/_nav.html") %>
 
-    <div class="title-container">
-      <div class="background-photo">
-        <img src="http://ww2.hdnux.com/photos/66/46/27/14317768/3/1500x0.jpg"></img>
-        <div class="caption landing"><span class="byline">Noah Berger, The Chronicle</span></div>
-      </div>
-      <div class="title-overlay">
-        <div class="title"><%=json.pulitzer_letter_for_fires_entry.Headline%></div>
-        <div class="deck"><%=json.pulitzer_letter_for_fires_entry.Deck%></div>
-        <div class="author">By <a href="mailto:jking@sfchronicle.com"><%=json.pulitzer_letter_for_fires_entry.Author%></a></div>
-        <div class="date"><%=json.pulitzer_letter_for_fires_entry.Date%></div>
-      </div>
-    </div>
+    <div class="title">How we covered the Wine Country Fires</div>
 
+    <div class="intro">
+      <p>Some disasters happen in a moment. Some unfold over a few hours. They may be confined to one place; their cause may be obvious. The Chronicle staff worked tirelessly over the first hours of the fire, covering it relentlessly and with tenacity. Breaking news stories were updated by the minute and investigations were underway from the start. Here is how the first 48 hours unfolded.</p>
+    </div>
 
     <% json.pulitzer_letter_for_fires_entry.text.forEach(function(d,didx){ %>
 

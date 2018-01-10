@@ -21,60 +21,68 @@
 
     <%= t.include("partials/_nav.html") %>
 
-    <div class="title">How we covered the Wine Country Fires</div>
+    <div class="title"><%=json.pulitzer_timeline.Headline%></div>
 
     <div class="intro">
-      <p>Some disasters happen in a moment. Some unfold over a few hours. They may be confined to one place; their cause may be obvious. The Chronicle staff worked tirelessly over the first hours of the fire, covering it relentlessly and with tenacity. Breaking news stories were updated by the minute and investigations were underway from the start. Here is how the first 48 hours unfolded.</p>
+      <p><%=json.pulitzer_timeline.Intro%></p>
     </div>
 
-    <% json.pulitzer_letter_for_fires_entry.text.forEach(function(d,didx){ %>
+    <div class="timeline-wrapper">
+    <% json.pulitzer_timeline.timeline.forEach(function(d,didx){ %>
 
-      <% if (d.type == "text") { %>
+      <div class="timeline-element">
+        <div class="timestamp"><%=d.Time%></div>
+        <div class="event"><p><%=d.Text%></div></p>
+      </div>
 
-        <p><%=d.value %></p>
+      <% if (d.Visual == "frontpagegif"){ %>
 
-      <% } else if (d.type == "photo"){ %>
+        <div class="inline-img">
+          <img src="./assets/graphics/homepage_display_900X900.gif"></img>
+        </div>
 
-        <% if (d.value[0].Class == "Wide") { %>
+      <% } else if (d.Visual == "photo"){ %>
+
+        <% if (d.Class == "Wide") { %>
 
           <div class="full-width-img">
-            <img src="<%=d.value[0].PhotoID%>"></img>
-            <div class="caption"><%= d.value[0].Caption %><span class="byline"> <%= d.value[0].Photographer %></span></div>
+            <img src="<%=d.PhotoID%>"></img>
+            <div class="caption"><%= d.Caption %><span class="byline"> <%= d.Photographer %></span></div>
           </div>
 
-        <% } else if (d.value[0].Class == "Inline") { %>
+        <% } else if (d.Class == "Inline") { %>
 
           <div class="inline-img-container">
             <div class="inline-img">
-              <img src="http://ww2.hdnux.com/photos/61/64/55/<%=d.value[0].PhotoID%>/5/1500x0.jpg"></img>
-              <div class="caption"><%= d.value[0].Caption %><span class="byline"> <%= d.value[0].Photographer %></span></div>
+              <img src="http://ww2.hdnux.com/photos/61/64/55/<%=d.PhotoID%>/5/1500x0.jpg"></img>
+              <div class="caption"><%= d.Caption %><span class="byline"> <%= d.Photographer %></span></div>
             </div>
           </div>
 
-        <% } else if (d.value[0].Class == "Float-left") { %>
+        <% } else if (d.Class == "Float-left") { %>
 
           <div class="float-img-container">
             <div class="float-img left">
-              <img src="http://ww2.hdnux.com/photos/61/64/55/<%=d.value[0].PhotoID%>/5/1500x0.jpg"></img>
-              <div class="caption"><%= d.value[0].Caption %><span class="byline"> <%= d.value[0].Photographer %></span></div>
+              <img src="http://ww2.hdnux.com/photos/61/64/55/<%=d.PhotoID%>/5/1500x0.jpg"></img>
+              <div class="caption"><%= d.Caption %><span class="byline"> <%= d.Photographer %></span></div>
             </div>
           </div>
 
-        <% } else if (d.value[0].Class == "Float-right") { %>
+        <% } else if (d.Class == "Float-right") { %>
 
           <div class="float-img-container">
             <div class="float-img right">
-              <img src="http://ww2.hdnux.com/photos/61/64/55/<%=d.value[0].PhotoID%>/5/1500x0.jpg"></img>
-              <div class="caption"><%= d.value[0].Caption %><span class="byline"> <%= d.value[0].Photographer %></span></div>
+              <img src="http://ww2.hdnux.com/photos/61/64/55/<%=d.PhotoID%>/5/1500x0.jpg"></img>
+              <div class="caption"><%= d.Caption %><span class="byline"> <%= d.Photographer %></span></div>
             </div>
           </div>
 
         <% } %>
 
-      <% } else if ( d.type == 'slideshow' ){ %>
+      <% } else if ( d.Visual == 'slideshow' ){ %>
 
           <div class="carousel slideshow js-flickity" data-flickity-options='{ "imagesLoaded": true }'>
-            <% d.value.forEach(function(slide) { %>
+            <% d.slideshow.forEach(function(slide) { %>
 
              <div class="carousel-cell">
               <img src="<%= slide.image %>">
@@ -85,40 +93,42 @@
 
           </div>
 
-      <% } else if (d.type == "bythenumbers"){ %>
+      <% } else if (d.Visual == "bythenumbers"){ %>
 
         <%= t.include("partials/_bythenumbers.html") %>
 
-      <% } else if (d.type == "bytheposts"){ %>
+      <% } else if (d.Visual == "bytheposts"){ %>
 
         <%= t.include("partials/_bytheposts.html") %>
 
-      <% } else if (d.type == "embedtweet"){ %>
+      <% } else if (d.Visual == "embedtweet"){ %>
 
-        <div class="float-img-container">
-          <div class="float-img right">
+        <!-- <div class="float-img-container"> -->
+          <!-- <div class="float-img right"> -->
+          <div class="inline-img">
             <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/BREAKINGNEWS?src=hash&amp;ref_src=twsrc%5Etfw">#BREAKINGNEWS</a>: Two major wildfires raging overnight in Napa. Mandatory evacuations:<a href="https://t.co/nKcpaEva11">https://t.co/nKcpaEva11</a></p>&mdash; San Francisco Chronicle (@sfchronicle) <a href="https://twitter.com/sfchronicle/status/917301969454116864?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>
           </div>
-        </div>
+        <!-- </div> -->
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-      <% } else if (d.type == "visual-link"){ %>
+      <% } else if (d.Visual == "visual-link"){ %>
 
-        <div class="float-img-container">
-          <div class="float-img right link-image">
+        <!-- <div class="float-img-container"> -->
+          <div class="inline-img link-image">
 
-            <a href="<%=d.value[0].Link%>" target="_blank">
-              <img src="<%=d.value[0].Image%>"></img>
-              <div class="story-link"><i class="fa fa-external-link" aria-hidden="true"></i><%=d.value[0].Caption%></div>
+            <a href="<%=d.Link%>" target="_blank">
+              <img src="<%=d.Image%>"></img>
+              <div class="story-link"><i class="fa fa-external-link" aria-hidden="true"></i><%=d.Caption%></div>
             </a>
           </div>
 
-        </div>
+        <!-- </div> -->
 
       <% } %>
 
     <% }) %>
+    </div>
 
     <div class="related-content-container">
       <div class="sub-hed">Projects</div>

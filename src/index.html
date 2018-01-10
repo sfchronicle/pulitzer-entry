@@ -37,7 +37,7 @@
 
       <% if (d.Visual == "frontpagegif"){ %>
 
-        <div class="inline-img">
+        <div class="inline-img frontpagegif">
           <img src="./assets/graphics/homepage_display_900X900.gif"></img>
         </div>
 
@@ -54,7 +54,7 @@
 
           <div class="inline-img-container">
             <div class="inline-img">
-              <img src="http://ww2.hdnux.com/photos/61/64/55/<%=d.PhotoID%>/5/1500x0.jpg"></img>
+              <img src="<%=d.PhotoID%>"></img>
               <div class="caption"><%= d.Caption %><span class="byline"> <%= d.Photographer %></span></div>
             </div>
           </div>

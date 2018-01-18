@@ -1,0 +1,16 @@
+<% data.forEach(function(d) { %>
+
+<div class="section center">
+  <div class="section-text">
+    <div class="timestamp"><%= d.timestamp %></div>
+    <div class="event center"><%= d.headline %></div>
+    <p class="center"><%= d.text %></p>
+    <div class="section-asset">
+	    <%= d.asset %>
+	  </div>
+  </div>
+</div>
+
+<% }); %>
+
+

@@ -1,0 +1,24 @@
+<div class="section center">
+
+  <div class="section-text">
+    <div class="timestamp"><%= data[0].timestamp %></div>
+    <div class="event center"><%= data[0].headline %></div>
+    <p class="center"><%= data[0].text %></p>
+  </div>
+
+  <div class="section-asset">
+    <div class="carousel slideshow js-flickity" data-flickity-options='{ "imagesLoaded": true }'>
+  
+		  <% data[0].slideshow.forEach(function(slide) { %>
+
+		   <div class="carousel-cell">
+		    <img src="<%= slide.image %>">
+		    <div class="caption"><%= slide.caption %> <span class="byline"><%= slide.credit %></span></div>
+		  </div>
+
+		  <% }); %>
+
+		</div>
+  </div>
+  
+</div>

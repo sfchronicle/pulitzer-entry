@@ -1,130 +1,205 @@
-.timeline-wrapper {
-  max-width: 1200px;
-  margin: auto;
-  .timestamp {
-    font-family: @banner;
-    font-size: 20px;
-    font-weight: 800;
-    padding-left: 20px;
-    text-align: center;
-    border-bottom: 2px solid @highlight;
-    max-width: 200px;
-    margin: auto;
-    // padding: 20px;
-    // background: @light-gray;
-    color: @highlight;
-    // border-bottom: 1px solid @dark-gray;
-    margin-bottom: 20px;
-  }
-  .timeline-element {
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    background: lighten(@light-gray,15%);
-    padding: 20px;
-  }
-}
-
 .frontpagegif {
-  max-width: 600px;
+  max-width: 300px;
+
+  @media @tablet{
+    margin: 1.5em auto 0;
+  }
 }
 
+.top-section{
+  .display-flex;
+  .align-items(center);
+  background:#333;
+  color:#fff;
 
-.link-image {
-  border: 2px solid @highlight;
-  padding: 10px;
-  max-width: 600px;
-  // background: @light-gray;
-  .story-link {
-    font-family: @bold-graphics;
-    font-size: 18px;
-    font-style: italic;
-    .fa {
-      padding-right: 10px;
+  @media @tablet{
+    .flex-direction(column-reverse);
+  }
+}
+
+.intro-text{
+  .flex(0 0 50%);
+
+  .title{
+    max-width:600px;
+    line-height:1;
+    padding:50px 0 0;
+    width:90%;
+    margin-bottom:10px;
+
+    @media @tablet{
+      padding:0 10px;
+      width:100%;
+      margin:20px auto 10px;
+      font-size:30px;
+      text-align:center;
     }
-    @media @mobile {
-      font-size: 16px;
+  }
+
+  .intro{
+    font-size:17px;
+
+    @media @tablet{
+      border:none;
+      margin-bottom:0;
     }
-  }
-  @media @mobile {
-    width: 90%;
-  }
-}
 
-.bythenumbers-part3 {
-  max-width: 400px;
-  margin: 40px auto;
-  // margin-right: 40px;
-  padding: 20px;
-  font-size: 14px;
-  border: 2px solid @highlight;
-  font-family: @med-graphics;
-  line-height: 1.4;
-  @media @mobile {
-    max-width: 90%;
-  }
-  .number {
-    padding-bottom: 8px;
-  }
-  .bold-number {
-    font-family: @bold-graphics;
-    font-size: 20px;
-    padding-right: 20px;
-    color: @highlight;
-  }
-  .bythenumbers-hed {
-    color: @highlight;
-    font-family: @bold-graphics;
-    font-size: 20px;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid @light-gray;
-  }
+    p{
+      padding:0;
 
-}
-
-.related-content-container {
-  max-width: 1200px;
-  padding: 0 20px;
-  margin: auto;
-  .sub-hed {
-    padding-top: 50px;
-    padding-left: 10px;
-    color: @dark-gray;
-    border-bottom: 1px solid @light-gray;
-    font-family: @block-graphics;
-    margin-bottom: 20px;
-  }
-  .story-container {
-    .display-flex;
-    .flex-wrap(wrap);
-    .story {
-      .flex(0 0 33%);
-      @media @mobile {
-        .flex(0 0 50%);
+      @media @tablet{
+        text-align:center;
       }
-      text-align: left;
+    }
+  }
+}
+
+.intro-img{
+  .flex(0 0 50%);
+  padding-top:30px;
+
+  @media @tablet{
+    max-width:250px;
+  }
+}
+
+
+
+.section{
+  .display-flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  .align-items(center);
+  .justify-content(space-between);
+  padding:50px 20px 70px;
+  border-bottom:1px solid #ccc;
+
+  @media @tablet{
+    .flex-direction(column);
+  }
+
+  &.center{
+    padding:100px 20px;
+    text-align:center;
+    .flex-direction(column);
+  }
+
+  &.reverse{
+    .flex-direction(row-reverse);
+  }
+}
+
+.section-text{
+  .flex(0 0 47%);
+  padding-right:20px;
+
+  @media @tablet{
+    padding:0;
+  }
+
+  &.slideshow{
+    .flex(0 0 38%);
+  }
+
+  .event{
+    max-width:600px;
+    line-height:1;
+    margin-bottom:10px;
+    font-size:2em;
+
+    @media @tablet{
+      font-size:30px;
+    }
+
+    &.center{
       margin: 0 auto;
-      font-family: @block-graphics;
-      font-size: 18px;
-      img {
-        width: 90%;
-      }
-      margin-bottom: 20px;
-      line-height: 1.2;
-      .story-title {
-        width: 90%;
-        padding-top: 5px;
-        .fa {
-          padding-right: 10px;
-        }
-      }
-      // padding: 20px;
+    }
+  }
+
+  .timestamp{
+    font-family:Sanchez-bold;
+    letter-spacing:1px;
+    font-size:13px;
+    color:red;
+
+    @media @tablet{
+      font-size:10px;
+    }
+  }
+
+  p{
+    padding:0;
+    max-width:480px;
+    margin:0;
+    font-size:17px;
+
+    &.center{
+      margin:10px auto;
+      max-width: 730px;
+      text-align: left;
     }
   }
 }
 
-.typewrite {
-  font-family: @block-graphics;
+.section-asset{
+  .flex(0 0 50%);
+  padding-top:30px;
+  width:100%;
+}
+
+.post-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 35px;
+height: 0;
+overflow: hidden;
+}
+
+.blink{
+  color:#000;
+  font-size:20px;
+  font-family:Hackman-bold;
+
+  @media @tablet{
+    font-size:14px;
+  }
+}
+
+
+progress {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  top: 37px;
+  z-index:100;
+
+  /* Dimensions */
+  width: 100%;
+  height: .25em;
+
+  /* Reset the apperance */  
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+
+  /* For Firefox/IE10+ */
+  background-color: transparent;
+
+  /* For IE10+, color of the progress bar */
+  color: red;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  background-color: red;
+}
+
+progress::-moz-progress-bar {
+  background-color: red;
 }

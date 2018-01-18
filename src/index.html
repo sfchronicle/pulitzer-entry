@@ -12,18 +12,18 @@
     <%=  t.include("partials/_paywall.html") %>
     <%= t.include("partials/_head.html") %>
   </head>
-  
+
   <body>
 
   <progress value="0" max="100"></progress>
   <div id="fb-root"></div>
 
     <%= t.include("partials/_nav.html") %>
-
+    <%= t.include("partials/_nav_clickable.html") %>
 
 
     <div class="top-section">
-      
+
       <div class="intro-text">
         <div class="title"><%=json.pulitzer_timeline.Headline%></div>
         <div class="intro">
@@ -42,7 +42,7 @@
 
 
 
-
+    <div id="hours12"></div>
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
@@ -50,12 +50,12 @@
         "headline": "Fires erupt",
         "text": "Deputy Metro Editor Demian Bulwa, who lives in Sonoma County, jumps out of bed at 11:15 p.m. when his house gets so smoky he fears there's a fire in the kitchen. Numerous wildfires had ignited -- the biggest of them between 9:45 and 10 p.m. in Napa County -- and were spreading fast. <br><br>Wildfires are common in California in the summer and fall, but these are different -- more than a dozen fires break out in Sonoma, Napa and Mendocino counties north of San Francisco, pushed by winds topping 70 mph, and thousands of people are running for their lives. Bulwa uses social media and phone calls to get up to speed and to collect early photographs from witnesses, while mobilizing the newsroom. The Chronicle posts his first story at 12:06 a.m., still a couple of hours before the worst destruction hits Sonoma County. This main story would be updated 31 times in the first eight hours and 73 times in the first 24 hours.",
         "asset": "<img src='//ww4.hdnux.com/photos/66/46/27/14320163/5/1500x0.jpg'>"
-      } 
+      }
 
     ]}) %>
 
 
-
+    <div id="day1"></div>
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
@@ -63,13 +63,13 @@
         "headline": "Social media campaign begins",
         "text": "Bulwa tweets a story link. The Chronicle’s digital team soon jumps in and posts from the main @SFChronicle account, the first of 72 tweets on the wildfires that Chronicle producers will sent in the next 24 hours. Over the week, the digital team will send 547 tweets from the main account, with hundreds more coming from reporters and photographers in the field. <br><br>At 1:04 a.m., the first Facebook post on the main Chronicle account goes live. The digital team will publish 62 more posts in the first 24 hours and 327 by the end of the week, sharing vital information for victims as well as news updates, videos, photo collections and live-streams. This day will become The Chronicle’s biggest ever day for Facebook engagement.",
         "asset": '<img src="./assets/photos/first_social.jpg">'
-      } 
+      }
 
     ]}) %>
 
 
-   
 
+    <div id="day2"></div>
     <%= t.include("partials/_slideshow.html", { data: [
 
       {
@@ -88,10 +88,11 @@
             "credit": "Author author, The Chronicle"
           }
         ]
-      } 
+      }
 
     ]}) %>
 
+    <div id="day3"></div>
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
@@ -99,11 +100,11 @@
         "headline": "Fire engulfs Santa Rosa",
         "text": "The biggest of the fires, the Tubbs Fire, jumps U.S. Highway 101 in Santa Rosa around 2 a.m. after surging west nearly 15 miles from the resort town of Calistoga. It’s now burning numerous homes and businesses in northern Santa Rosa. At 2:29 a.m., the Chronicle posts a 13th update to the main story, incorporating reporting on the damage to the city of 175,000.",
         "asset": "<img src='./assets/gifs/tornado.gif'>"
-      } 
+      }
 
     ]}) %>
 
-
+    <div id="day4"></div>
     <%= t.include("partials/_image-notext.html", { data: [
 
       {
@@ -111,11 +112,11 @@
         "headline": "Signorelli winery burns",
         "text": "Photographer Noah Berger heads to Signorelli Estate on the Napa Valley’s famed Silverado Trail when he hears on his scanner that the winery is ablaze. No firefighters are on scene, and the intense winds make Berger fear that trees will fall and trap him. One of the images he shoots, at 2:11 a.m., will become the lead photo on the Chronicle’s front page the next day.",
         "asset": "<img src='http://ww3.hdnux.com/photos/66/46/24/14312738/9/1200x0.jpg'>"
-      } 
+      }
 
     ]}) %>
 
-
+    <div id="day5"></div>
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
@@ -123,10 +124,11 @@
         "headline": "Flames tear through Carneros",
         "text": "Photographer Peter DaSilva captures images of flames destroying structures, including a Stornetta Dairy building, in the Carneros wine and agriculture region in Sonoma County.",
         "asset": "<img src='http://ww4.hdnux.com/photos/66/46/32/14313107/7/1024x1024.jpg'>"
-      } 
+      }
 
     ]}) %>
 
+    <div id="day6"></div>
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
@@ -134,11 +136,11 @@
         "headline": "Evacuees flood into Petaluma",
         "text": "Reporter Jill Tucker arrives Petaluma to find it flooded with panicked and confused evacuees from Napa and Sonoma counties flooding into the city of 58,000, just south of Santa Rosa. In interviews at an evacuation center and elsewhere, she begins to hear complaints about a lack of telephone alerts to victims of the worst fire, the Tubbs Fire -- which will become a major focus of Chronicle reporting in the hours and days ahead.",
         "asset": '<div class="fb-video" data-href="https://www.facebook.com/SFChronicle/videos/10155874052139524/" data-width="500" data-show-text="false"><blockquote cite="https://www.facebook.com/SFChronicle/videos/10155874052139524/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/SFChronicle/videos/10155874052139524/"></a><p>Fires burn in the hills near the Silverado Trail in Yountville. The scope of the North Bay fires’ devastation continues to grow. 🎥: &#064;lsuzuki #napafire #sonomafire #northbayfires #winecountry</p>Posted by <a href="https://www.facebook.com/SFChronicle/">San Francisco Chronicle</a> on Monday, October 9, 2017</blockquote></div>'
-      } 
+      }
 
     ]}) %>
 
-
+    <div id="future"></div>
     <%= t.include("partials/_image-notext.html", { data: [
 
       {
@@ -146,7 +148,7 @@
         "headline": "Stags’ Leap takes heavy damage",
         "text": "Photographer Peter DaSilva, now in the Napa Valley, captures buildings going up in flames at the well-known Stags’ Leap winery.",
         "asset": "<img src='http://ww2.hdnux.com/photos/66/47/23/14316737/3/1200x0.jpg'>"
-      } 
+      }
 
     ]}) %>
 
@@ -158,7 +160,7 @@
         "headline": "Evacuations story published",
         "text": "With thousands of people being told to leave their homes, evacuation centers fill up almost as quickly as officials can designate them. The Chronicle posts its first list of centers and evacuated areas at 4:42 a.m. and updates it throughout the day, helping people in the danger zones learn where they can go for food and shelter, and showing loved ones outside the area where people are having to flee.",
         "asset": "GRAPHIC HERE"
-      } 
+      }
 
     ]}) %>
 
@@ -170,7 +172,7 @@
         "headline": "Push notification campaign begins",
         "text": "Producers send the first of 12 push alerts over the first 24 hours of the wildfires. The notifications to users of the SFChronicle iOS app focus on breaking news developments, alert readers to changes in the fires' path, update death and injury totals, and feature information meant to be helpful during the disaster. Over the course of the week, producers send 57 push alerts to readers.",
         "asset": "GRAPHIC HERE"
-      } 
+      }
 
     ]}) %>
 
@@ -182,7 +184,7 @@
         "headline": "Weather story published",
         "text": "The Chronicle posts another sidebar, reporting on the extraordinary weather conditions that are spreading the fires -- winds gusting up to 70 mph and humidity levels in the single digits.",
         "asset": "STATIC GRAPHIC HERE"
-      } 
+      }
 
     ]}) %>
 
@@ -227,7 +229,7 @@
             "image": "./assets/photos/tweets/t11.jpg"
           }
         ]
-      } 
+      }
 
     ]}) %>
 
@@ -238,7 +240,7 @@
         "headline": "Smoke story is published",
         "text": "All over Northern California, people are waking up to brown skies and a powerful smell of smoke. The Chronicle posts the first of several stories it will do publish over the coming days detailing the potential smoke-related health risks to people far from the fires and steps they can take to protect themselves.",
         "asset": '<div class="fb-video" data-href="https://www.facebook.com/SFChronicle/videos/10155875512244524/" data-width="500" data-show-text="false"><blockquote cite="https://www.facebook.com/SFChronicle/videos/10155875512244524/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/SFChronicle/videos/10155875512244524/">Wine Country Fires: Atlas Blaze from Above</a><p>Smoke rises from the Atlas fire as it burns in the hills east of Napa on Monday afternoon. Video from Michael Short. Latest updates: http://bit.ly/Northern-California-Fires</p>Posted by <a href="https://www.facebook.com/SFChronicle/">San Francisco Chronicle</a> on Monday, October 9, 2017</blockquote></div>'
-      } 
+      }
 
     ]}) %>
 
@@ -249,7 +251,7 @@
         "headline": "Fire at would-be command post",
         "text": "Reporter Kurtis Alexander finds that a huge Kmart store in Santa Rosa -- in a parking lot that was supposed to be used as a command post for firefighters -- is burning down and captures video. It is viewed nearly 16,000 times on Twitter alone.",
         "asset": '<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Santa Rosa Kmart on Cleveland Ave fully engulfed. <a href="https://twitter.com/hashtag/TubbsFire?src=hash&amp;ref_src=twsrc%5Etfw">#TubbsFire</a> <a href="https://t.co/yWkmdW1No0">pic.twitter.com/yWkmdW1No0</a></p>&mdash; Kurtis Alexander (@kurtisalexander) <a href="https://twitter.com/kurtisalexander/status/917393895196999681?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>'
-      } 
+      }
 
     ]}) %>
 
@@ -260,7 +262,7 @@
         "headline": "Hilton Hotel burning",
         "text": "On the other side of U.S. Highway 101 in Santa Rosa from the fire at the would-be command post, reporter Kurtis Alexander captures video of one of the region’s biggest hotels in flames. It is viewed nearly 40,000 times on Twitter alone.",
         "asset": '<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Santa Rosa&#39;s Hilton Sonoma hotel among dozens of burned businesses. <a href="https://twitter.com/hashtag/TubbsFire?src=hash&amp;ref_src=twsrc%5Etfw">#TubbsFire</a> <a href="https://t.co/tp8RZebSBw">pic.twitter.com/tp8RZebSBw</a></p>&mdash; Kurtis Alexander (@kurtisalexander) <a href="https://twitter.com/kurtisalexander/status/917399193701908480?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>'
-      } 
+      }
 
     ]}) %>
 
@@ -271,11 +273,11 @@
         "headline": "Running ‘live blog’ launched",
         "text": "To supplement the main story, The Chronicle launches a running “live blog” of updates from around the region, letting readers see at a glance the most up-to-date news. The blog would stay active for XX (six?) days and be updated every few minutes around the clock by a newsroom working 24/7. The files became so long and contained so many media assets that the articles broke the website management system and each day had to be broken apart, with links to the previous day’s coverage added to the end.",
         "asset": 'GIF of a scroll down a "live blog" online story.'
-      } 
+      }
 
     ]}) %>
 
-    
+
 
     <%= t.include("partials/_footer.html") %>
     <script src="app.js" async></script>

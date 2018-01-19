@@ -94,17 +94,16 @@ $( "#runalerts" ).click(function() {
 
 function alerts() {
   var chatDelay = 0;
-  $.each(chatMessages, function(index, obj) {
+  $.each(chatMessages, function(i, obj) {
     chatDelay = chatDelay + 2000;
-    var chatDelay2 = chatDelay + obj.delay;
+    var chatDelay2 = chatDelay + 300;
     var chatDelay3 = chatDelay2 + 10;
     var scrollDelay = chatDelay;
     var chatTimeString = " ";
-    var msgname = "." + obj.name;
-    var msginner = ".messageinner-" + obj.name;
-    var spinner = ".sp-" + obj.name;
-    chatTimeString = "<span class='message-time'>" + obj.time + "</span>";
-    $(".chat-message-list").append("<li class='message-" + obj.align + " " + obj.name + "' hidden><div class='sp-" + obj.name + "'><span class='spinme-" + obj.align + "'></span></div><div class='messageinner-" + obj.name + "' hidden><span class='message-text'>" + obj.msg + "</span>" + chatTimeString + "</div></li>");
+    var msgname = "." + obj.id;
+    var msginner = ".messageinner-" + obj.id;
+    chatTimeString = "<span class='message-time'>" + obj.day + ", " + obj.date + ", " + obj.time + "</span>";
+    $(".chat-message-list").append("<li class='message-left hidden><div class='sp-" + obj.id + "'></div><div class='messageinner-" + obj.id + "' hidden><span class='message-text'>" + obj.msg + "</span>" + chatTimeString + "</div></li>");
     $(msgname).delay(chatDelay).fadeIn();
     $(msginner).delay(chatDelay3).fadeIn();
     setTimeout(onRowAdded, chatDelay);

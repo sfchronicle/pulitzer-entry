@@ -558,30 +558,9 @@
 
 
     <%= t.include("partials/_footer.html") %>
-    <script>var chatMessages = [{
-
-  name: "ms1",
-  msg: "Huge fires in Napa and Sonoma counties burn structures, force evacuations, close hospitals",
-  delay: 300,
-  align: "left",
-  time: "Monday, Oct. 9, 5:14 a.m."
-},
-{
-
-  name: "ms2",
-  msg: "North Bay fires: See a list of areas being evacuated and the locations of evacuation centers",
-  delay: 300,
-  align: "left",
-  time: "Monday, Oct. 9, 6:19 a.m."
-},
-{
-  name: "ms3",
-  msg: "Public schools closed in several cities, including Napa, Santa Rosa and Petaluma, Due to North Bay Fires",
-  delay: 300,
-  align: "left",
-  time: "Monday, Oct. 9, 6:52 a.m."
-}
-                   ];</script>
+    <script>
+       var chatMessages = <%= JSON.stringify(json.alerts) %>
+    </script>
     <script src="app.js" async></script>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     <%= t.include("partials/_helloSFC.html") %>

@@ -35,7 +35,7 @@
 
       <div class="intro-img">
         <div class="inline-img frontpagegif">
-          <img src="./assets/gifs/homepage2.gif"></img>
+          <img src="./assets/gifs/homepage.gif"></img>
         </div>
       </div>
 
@@ -270,16 +270,17 @@
 
 
 
-    <%= t.include("partials/_text-noimage.html", { data: [
+    <%= t.include("partials/_text-pullquote.html", { data: [
 
       {
         "timestamp": "8:28 a.m.",
-        "headline": "“Why was there no alert?”",
-        "text": "The Chronicle publishes the first detailed account of the destruction of multiple neighborhoods in Santa Rosa. Reporter Jill Tucker continues to hear reports from confused and angry residents that The Chronicle will investigate into the coming weeks: Many received little or no official warning of the disaster that was heading their way."
+        "headline": "Devastation, anger in Santa Rosa",
+        "text": "The Chronicle publishes the first detailed account of the destruction of multiple neighborhoods in Santa Rosa. Reporter Jill Tucker continues to hear reports from confused and angry residents that The Chronicle will investigate into the coming weeks: Many received little or no official warning of the disaster that was heading their way.",
+        "asset": "Why was there no alert?",
+        "author": "Tim Ros"
       }
 
     ]}) %>
-
 
 
 
@@ -550,17 +551,6 @@
         "headline": "Front pages",
         "text": "",
         "asset":'<img src="./assets/graphics/fire_front_pages.jpg">'
-      }
-
-    ]}) %>
-
-    <%= t.include("partials/_text-pullquote.html", { data: [
-
-      {
-        "timestamp": "8:28 a.m.",
-        "headline": "Devastation, anger in Santa Rosa",
-        "text": "The Chronicle publishes the first detailed account of the destruction of multiple neighborhoods in Santa Rosa. Reporter Jill Tucker continues to hear reports from confused and angry residents that The Chronicle will investigate into the coming weeks: Many received little or no official warning of the disaster that was heading their way.",
-        "asset": "Tim Ros got a call from a friend saying there was a fire. He decided to shower and shave and then head out. When he saw burning embers floating past the bathroom window, he decided to skip the shave."
       }
 
     ]}) %>

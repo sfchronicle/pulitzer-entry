@@ -6,6 +6,9 @@
   }
 }
 
+.inline-img{
+  margin:0 auto;
+}
 .top-section{
   .display-flex;
   .align-items(center);
@@ -203,3 +206,102 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   background-color: red;
 }
+
+
+#wrapper {
+  width: 100%;
+  max-width:500px;
+  margin: 50px auto 20px;
+  text-align: center;
+}
+
+#runalerts{
+  background: red;
+  display: inline-block;
+  color: white;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  font-family: hackman-extrabold;
+  font-size: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.chat ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.message-left .message-time {
+  display: block;
+  font-size: 12px;
+  text-align: left;
+  padding-left: 30px;
+  padding-top: 4px;
+  color: #4c4c4c;
+  font-family: @block-graphics;
+}
+
+.message-left {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+
+
+.message-left .message-text {
+  width: 100%;
+  display: inline-block;
+  background: #fff;
+  padding: 15px;
+  font-size: 14px;
+  color: #000;
+  border-radius: 10px;
+  font-weight: 100;
+  line-height: 1.5em;
+  background-image: url(//projects.sfchronicle.com/shared/logos/sfletter_c_black.png);
+  background-size: 16px;
+  background-position: 15px 16px;
+  background-repeat: no-repeat;
+  font-family:@body;
+
+    &:before{
+    display: inline-block;
+    width: 100%;
+    content:"SF CHRONICLE";
+    margin-left: 22px;
+    margin-bottom:10px;
+    font-family:Arial, sans-serif;
+  }
+}
+
+.chat {
+  border-radius: 30px;
+  padding: 20px;
+  background: #f5f7fa;
+
+  @media @mobile{
+    padding:20px 10px;
+  }
+}
+
+.chat-container {
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.spinme-right {
+  display: none;
+}
+
+.spinme-left {
+  display: none;
+}
+
+.spinner {
+  display:none;
+}
+

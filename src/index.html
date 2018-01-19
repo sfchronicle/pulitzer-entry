@@ -27,7 +27,9 @@
       <div class="intro-text">
         <div class="title"><%=json.pulitzer_timeline.Headline%></div>
         <div class="intro">
-          <p><%=json.pulitzer_timeline.Intro%></p>
+          <p>Some disasters happen in a moment, or unfold over a few hours. They may be confined to one place. Their cause mays be obvious. The fires that swept through Northern California’s Wine Country fit none of those descriptions. They were so big they touched eight counties, so powerful they created tornadoes that flipped cars as they wiped out whole neighborhoods. They were effectively breaking news for weeks.</p>
+          <p>The following is a summary of how The San Francisco Chronicle responded when more than a dozen wildfires kicked off during a windstorm in the middle of the night of Oct. 8 and 9. The fires would become the most destructive in state history, killing 44 people and destroying 8,900 structures.</p>
+          <p>Covering the firestorm was both difficult and important. Journalists worked long hours in sometimes dangerous conditions at a time when people were desperate for good information. In the first minutes, and then over many days and weeks, The Chronicle illuminated the disaster by providing the most timely, thorough and probing coverage on an array of platforms.</p>
         </div>
       </div>
 
@@ -48,34 +50,32 @@
       {
         "timestamp": "BEFORE MIDNIGHT",
         "headline": "Fires erupt",
-        "text": "Deputy Metro Editor Demian Bulwa, who lives in Sonoma County, jumps out of bed at 11:15 p.m. when his house gets so smoky he fears there's a fire in the kitchen. Numerous wildfires had ignited -- the biggest of them between 9:45 and 10 p.m. in Napa County -- and were spreading fast. <br><br>Wildfires are common in California in the summer and fall, but these are different -- more than a dozen fires break out in Sonoma, Napa and Mendocino counties north of San Francisco, pushed by winds topping 70 mph, and thousands of people are running for their lives. Bulwa uses social media and phone calls to get up to speed and to collect early photographs from witnesses, while mobilizing the newsroom. The Chronicle posts his first story at 12:06 a.m., still a couple of hours before the worst destruction hits Sonoma County. This main story would be updated 31 times in the first eight hours and 73 times in the first 24 hours.",
-        "asset": "<img src='//ww4.hdnux.com/photos/66/46/27/14320163/5/1500x0.jpg'>"
+        "text": "Deputy Metro Editor Demian Bulwa, who lives in Sonoma County, jumps out of bed at 11:15 p.m. when his house gets so smoky he fears there’s a fire in the kitchen. It turns out that numerous wildfires have ignited in Sonoma, Napa and Mendocino counties north of San Francisco and are spreading fast. Such fires are common in California in the summer and fall, but these are different — they’re spread across several counties, being pushed by winds topping 70 mph, and thousands of people are running for their lives. Bulwa uses social media and phone calls to collect facts as well as early photographs from witnesses, while mobilizing the newsroom. The Chronicle posts his first story at 12:06 a.m., still hours before the worst destruction hits Sonoma County. This primary story would be updated 31 times in the first eight hours and 73 times in the first 24 hours.",
+        "asset": "<img src='./assets/gifs/fire-story.gif'>"
       }
 
     ]}) %>
 
 
-    <div id="day1"></div>
+    
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
         "timestamp": "12:12 a.m.",
         "headline": "Social media campaign begins",
-        "text": "Bulwa tweets a story link. The Chronicle’s digital team soon jumps in and posts from the main @SFChronicle account, the first of 72 tweets on the wildfires that Chronicle producers will sent in the next 24 hours. Over the week, the digital team will send 547 tweets from the main account, with hundreds more coming from reporters and photographers in the field. <br><br>At 1:04 a.m., the first Facebook post on the main Chronicle account goes live. The digital team will publish 62 more posts in the first 24 hours and 327 by the end of the week, sharing vital information for victims as well as news updates, videos, photo collections and live-streams. This day will become The Chronicle’s biggest ever day for Facebook engagement.",
+        "text": "Bulwa’s tweet of a link to the main story is the first from the newsroom. The Chronicle’s digital team soon jumps in and posts from the main @SFChronicle account on Twitter and Facebook around 1 a.m. SFChronicle producers will send 72 tweets and publish 62 Facebook posts on the wildfires in the first 24 hours, sharing vital evacuation information as well as news updates, videos, photo collections, maps and live-streams. Over the first week, the SFChronicle accounts will send 547 tweets and publish 327 Facebook posts. It will be the biggest week across all social engagement categories in site history.",
         "asset": '<img src="./assets/photos/first_social.jpg">'
       }
 
     ]}) %>
 
 
-
-    <div id="day2"></div>
     <%= t.include("partials/_slideshow.html", { data: [
 
       {
         "timestamp": "1:15 a.m.",
         "headline": "Reporters and photographers reach Napa",
-        "text": "Reporter Peter Fimrite drives into Napa County flames on both sides of the small highway and begins interviewing evacuees on the roads and in an evacuation center. Photographers Carlos Avila Gonzalez and Noah Berger rush into the hills on the northeast side of the Napa Valley to capture some of the first images of homes burning in the Atlas Fire, working to the sound of propane tanks exploding all around. Over the next several hours, nine more reporters and XX more photographers will spread through the fire zone, gathering breaking news, information, accounts of tragedy and heroism, and photos and videos that show readers the scale of the spreading disaster. They also start collecting details for enterprise and investigative stories that will be published in the days ahead.",
+        "text": "Reporter Peter Fimrite drives into Napa County with flames on both sides of the narrow highway and begins interviewing fleeing residents on the roads and in an evacuation center. Photographers Carlos Avila Gonzalez and Noah Berger rush into the hills on the northeast side of the Napa Valley to capture some of the first images of homes burning in the Atlas Fire, working to the sound of propane tanks exploding all around. Over the next several hours, nine more reporters and six additional photographers will spread through the fire zone, gathering breaking news, accounts of tragedy and heroism, and photos and videos that show readers the scale of the spreading disaster. They will also start collecting details that will spur significant enterprise and investigative stories that will be published in the days ahead.",
         "slideshow": [
           {
             "image": "./assets/graphics/Friday_air_quality_graphic.jpg",
@@ -92,74 +92,61 @@
 
     ]}) %>
 
-    <div id="day3"></div>
+
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
         "timestamp": "2 a.m.",
         "headline": "Fire engulfs Santa Rosa",
-        "text": "The biggest of the fires, the Tubbs Fire, jumps U.S. Highway 101 in Santa Rosa around 2 a.m. after surging west nearly 15 miles from the resort town of Calistoga. It’s now burning numerous homes and businesses in northern Santa Rosa. At 2:29 a.m., the Chronicle posts a 13th update to the main story, incorporating reporting on the damage to the city of 175,000.",
+        "text": "Having burned a 15-mile westward path from the Napa County resort town of Calistoga, the biggest of the wildfires, the Tubbs Fire, jumps U.S. Highway 101 in Santa Rosa. Numerous homes and businesses in the city of 175,000 rapidly go up in flames. Less than 30 minutes later, at 2:29 a.m., The Chronicle’s 13th update to its initial story incorporates the news of the shocking damage.",
         "asset": "<img src='./assets/gifs/tornado.gif'>"
       }
 
     ]}) %>
 
-    <div id="day4"></div>
+
     <%= t.include("partials/_image-notext.html", { data: [
 
       {
         "timestamp": "2:11 a.m",
         "headline": "Signorelli winery burns",
-        "text": "Photographer Noah Berger heads to Signorelli Estate on the Napa Valley’s famed Silverado Trail when he hears on his scanner that the winery is ablaze. No firefighters are on scene, and the intense winds make Berger fear that trees will fall and trap him. One of the images he shoots, at 2:11 a.m., will become the lead photo on the Chronicle’s front page the next day.",
+        "text": "Photographer Noah Berger hears on his scanner that Signorelli Estate, a winery on Napa Valley’s famed Silverado Trail, is ablaze. No firefighters are on scene, and the intense winds make Berger fear that trees could fall and trap him./were they falling? One of the images he shoots, at 2:11 a.m., will become the lead photo on The Chronicle’s front page the next day.",
         "asset": "<img src='http://ww3.hdnux.com/photos/66/46/24/14312738/9/1200x0.jpg'>"
       }
 
     ]}) %>
 
-    <div id="day5"></div>
+
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
-        "timestamp": "XX a.m.",
-        "headline": "Flames tear through Carneros",
+        "timestamp": "2:29 a.m.",
+        "headline": "Freeway jump",
         "text": "Photographer Peter DaSilva captures images of flames destroying structures, including a Stornetta Dairy building, in the Carneros wine and agriculture region in Sonoma County.",
-        "asset": "<img src='http://ww4.hdnux.com/photos/66/46/32/14313107/7/1024x1024.jpg'>"
+        "asset": "GIF HERE"
       }
 
     ]}) %>
 
-    <div id="day6"></div>
+
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
         "timestamp": "3:30 a.m.",
         "headline": "Evacuees flood into Petaluma",
-        "text": "Reporter Jill Tucker arrives Petaluma to find it flooded with panicked and confused evacuees from Napa and Sonoma counties flooding into the city of 58,000, just south of Santa Rosa. In interviews at an evacuation center and elsewhere, she begins to hear complaints about a lack of telephone alerts to victims of the worst fire, the Tubbs Fire -- which will become a major focus of Chronicle reporting in the hours and days ahead.",
+        "text": "Reporter Jill Tucker arrives in Petaluma to find panicked and confused evacuees from Napa and Sonoma counties flooding into the small city just south of Santa Rosa. In interviews at an evacuation center and elsewhere, she begins to hear complaints about a lack of telephone alerts to those in the path of the fires – a fact that will become a major focus of Chronicle reporting in the hours and days ahead.",
         "asset": '<div class="fb-video" data-href="https://www.facebook.com/SFChronicle/videos/10155874052139524/" data-width="500" data-show-text="false"><blockquote cite="https://www.facebook.com/SFChronicle/videos/10155874052139524/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/SFChronicle/videos/10155874052139524/"></a><p>Fires burn in the hills near the Silverado Trail in Yountville. The scope of the North Bay fires’ devastation continues to grow. 🎥: &#064;lsuzuki #napafire #sonomafire #northbayfires #winecountry</p>Posted by <a href="https://www.facebook.com/SFChronicle/">San Francisco Chronicle</a> on Monday, October 9, 2017</blockquote></div>'
       }
 
     ]}) %>
 
-    <div id="future"></div>
-    <%= t.include("partials/_image-notext.html", { data: [
-
-      {
-        "timestamp": "XX a.m.",
-        "headline": "Stags’ Leap takes heavy damage",
-        "text": "Photographer Peter DaSilva, now in the Napa Valley, captures buildings going up in flames at the well-known Stags’ Leap winery.",
-        "asset": "<img src='http://ww2.hdnux.com/photos/66/47/23/14316737/3/1200x0.jpg'>"
-      }
-
-    ]}) %>
-
-
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
         "timestamp": "4:42 a.m.",
-        "headline": "Evacuations story published",
-        "text": "With thousands of people being told to leave their homes, evacuation centers fill up almost as quickly as officials can designate them. The Chronicle posts its first list of centers and evacuated areas at 4:42 a.m. and updates it throughout the day, helping people in the danger zones learn where they can go for food and shelter, and showing loved ones outside the area where people are having to flee.",
-        "asset": "GRAPHIC HERE"
+        "headline": "Evacuation alerts",
+        "text": "With thousands of people being told to leave their homes, evacuation centers fill up almost as quickly as officials can designate them. The Chronicle posts its first list of shelters and evacuated areas at 4:42 a.m. It will update throughout the day, helping people in the danger zones learn where they can go for food and shelter, and showing loved ones outside the area where people are being forced to flee. Soon after the story posts, SFChronicle digital producers send the first of 12 push alerts that will go out over the first 24 hours of the wildfires. The notifications to app users focus on breaking news, alert readers to changes in the fires’ paths, update death and injury totals, and feature other helpful information during the disaster. Through the week, producers will send 57 push alerts to readers.",
+        "asset": '<div id="wrapper"><div class="chat"><div class="chat-container"><div class="chat-listcontainer"><ul class="chat-message-list"></ul></div></div></div><div id="runalerts">Replay</div></div>'
       }
 
     ]}) %>
@@ -168,22 +155,10 @@
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
-        "timestamp": "5:14 a.m",
-        "headline": "Push notification campaign begins",
-        "text": "Producers send the first of 12 push alerts over the first 24 hours of the wildfires. The notifications to users of the SFChronicle iOS app focus on breaking news developments, alert readers to changes in the fires' path, update death and injury totals, and feature information meant to be helpful during the disaster. Over the course of the week, producers send 57 push alerts to readers.",
-        "asset": "GRAPHIC HERE"
-      }
-
-    ]}) %>
-
-
-    <%= t.include("partials/_text-visual.html", { data: [
-
-      {
-        "timestamp": "5:16 a.m.",
-        "headline": "Weather story published",
-        "text": "The Chronicle posts another sidebar, reporting on the extraordinary weather conditions that are spreading the fires -- winds gusting up to 70 mph and humidity levels in the single digits.",
-        "asset": "STATIC GRAPHIC HERE"
+        "timestamp": "5:03 a.m",
+        "headline": "Third pull of main bar from Demian",
+        "text": "",
+        "asset": "VISUAL HERE"
       }
 
     ]}) %>
@@ -193,7 +168,7 @@
       {
         "timestamp": "5:45 a.m.",
         "headline": "Destruction revealed in Santa Rosa",
-        "text": "Reporters Jill Tucker and Kurtis Alexander, starting without the benefit of sunlight, begin chronicling the extent of the devastation in Santa Rosa. They report from a hospital under evacuation; a gun store where ammunition was exploding; a flattened mobile home park; and the ruined neighborhoods of Fountaingrove and Coffey Park, which are nearly impassable due to fallen power lines and still-burning homes.<br><br>As in Napa County, reporters notice an absence of firefighters in many areas. The Chronicle soon files information requests under California’s public-records act, and will ultimately break a startling story. Commanders overseeing the two biggest wildfires desperately asked fire agencies around the state to send hundreds of engines to help with the fight – but fewer than half made it in the crucial first 12 hours.",
+        "text": "Before sunrise, reporters Jill Tucker and Kurtis Alexander begin chronicling the extent of the devastation in Santa Rosa. They report from a hospital forced to evacuate patients; a gun store where ammunition is exploding; a flattened mobile home park; and the ruined neighborhoods of Fountaingrove and Coffey Park, made nearly impassable by fallen power lines and still-burning homes.<br><br>As in Napa County, reporters note an absence of firefighters in many areas. The Chronicle soon files information requests under California’s public-records act, and will ultimately break a startling story: Requests for hundreds of fire engines from outside the area to fight the blazes went largely unanswered.",
         "slideshow": [
           {
             "image": "./assets/photos/tweets/t1.jpg"
@@ -233,46 +208,348 @@
 
     ]}) %>
 
+
+    <%= t.include("partials/_text-visual.html", { data: [
+
+      {
+        "timestamp": "6:35 a.m.",
+        "headline": "Engagement efforts widen",
+        "text": "The SFChronicle digital team starts publishing images on Instagram, and the mobile-focused campaign grows over the week to include 48 posts of photos, slideshows, videos, graphics, maps, GIFs, audio and illustrations.<br><br>Soon after, the newsroom’s first newsletter arrives in readers’ inboxes, and it contains links to five wildfire-related stories at sunrise. It is the first of 22 wildfire newsletters sent by the SFChronicle digital team the first week.",
+        "asset": "GIF OF INSTAGRAM HERE"
+      }
+
+    ]}) %>
+
+
+
+
+    
+
+
+
+
+
+
+
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
         "timestamp": "7:08 a.m.",
-        "headline": "Smoke story is published",
-        "text": "All over Northern California, people are waking up to brown skies and a powerful smell of smoke. The Chronicle posts the first of several stories it will do publish over the coming days detailing the potential smoke-related health risks to people far from the fires and steps they can take to protect themselves.",
+        "headline": "Smoke everywhere",
+        "text": "Across Northern California, people are waking up to brown skies and the acrid smell of smoke. The Chronicle posts the first of several stories published over the coming days detailing the smoke-related health risks to people far from the fires and explaining what they can do to protect themselves. ",
         "asset": '<div class="fb-video" data-href="https://www.facebook.com/SFChronicle/videos/10155875512244524/" data-width="500" data-show-text="false"><blockquote cite="https://www.facebook.com/SFChronicle/videos/10155875512244524/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/SFChronicle/videos/10155875512244524/">Wine Country Fires: Atlas Blaze from Above</a><p>Smoke rises from the Atlas fire as it burns in the hills east of Napa on Monday afternoon. Video from Michael Short. Latest updates: http://bit.ly/Northern-California-Fires</p>Posted by <a href="https://www.facebook.com/SFChronicle/">San Francisco Chronicle</a> on Monday, October 9, 2017</blockquote></div>'
       }
 
     ]}) %>
+
+
 
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
         "timestamp": "7:18 a.m.",
         "headline": "Fire at would-be command post",
-        "text": "Reporter Kurtis Alexander finds that a huge Kmart store in Santa Rosa -- in a parking lot that was supposed to be used as a command post for firefighters -- is burning down and captures video. It is viewed nearly 16,000 times on Twitter alone.",
+        "text": "Reporter Kurtis Alexander finds that a huge Kmart store in Santa Rosa – in a parking lot that was supposed to be used as a command post for firefighters – is burning down and captures video. A Hilton Hotel, one of the region’s largest, is also on fire. Together, the videos are viewed nearly 50,000 times on Twitter alone.",
         "asset": '<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Santa Rosa Kmart on Cleveland Ave fully engulfed. <a href="https://twitter.com/hashtag/TubbsFire?src=hash&amp;ref_src=twsrc%5Etfw">#TubbsFire</a> <a href="https://t.co/yWkmdW1No0">pic.twitter.com/yWkmdW1No0</a></p>&mdash; Kurtis Alexander (@kurtisalexander) <a href="https://twitter.com/kurtisalexander/status/917393895196999681?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>'
       }
 
     ]}) %>
 
-    <%= t.include("partials/_text-visual.html", { data: [
-
-      {
-        "timestamp": "7:39 a.m.",
-        "headline": "Hilton Hotel burning",
-        "text": "On the other side of U.S. Highway 101 in Santa Rosa from the fire at the would-be command post, reporter Kurtis Alexander captures video of one of the region’s biggest hotels in flames. It is viewed nearly 40,000 times on Twitter alone.",
-        "asset": '<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Santa Rosa&#39;s Hilton Sonoma hotel among dozens of burned businesses. <a href="https://twitter.com/hashtag/TubbsFire?src=hash&amp;ref_src=twsrc%5Etfw">#TubbsFire</a> <a href="https://t.co/tp8RZebSBw">pic.twitter.com/tp8RZebSBw</a></p>&mdash; Kurtis Alexander (@kurtisalexander) <a href="https://twitter.com/kurtisalexander/status/917399193701908480?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>'
-      }
-
-    ]}) %>
+  
 
     <%= t.include("partials/_text-visual.html", { data: [
 
       {
         "timestamp": "8:13 a.m.",
-        "headline": "Running ‘live blog’ launched",
-        "text": "To supplement the main story, The Chronicle launches a running “live blog” of updates from around the region, letting readers see at a glance the most up-to-date news. The blog would stay active for XX (six?) days and be updated every few minutes around the clock by a newsroom working 24/7. The files became so long and contained so many media assets that the articles broke the website management system and each day had to be broken apart, with links to the previous day’s coverage added to the end.",
-        "asset": 'GIF of a scroll down a "live blog" online story.'
+        "headline": "Live blog launched",
+        "text": "Even as it posts its 31st update of its primary story at 8 a.m., The Chronicle initiates a live blog that will constantly update readers with items summarizing the latest news. This easily digested running account of the dynamic wildfires situation would stay active through the first week, updated regularly by a newsroom being staffed around the clock. Each day’s account would include hundreds of entries and multiple media assets.",
+        "asset": ' GIF of certain moments flashing quickly.'
+      }
+
+    ]}) %>
+
+  
+
+    <%= t.include("partials/_text-noimage.html", { data: [
+
+      {
+        "timestamp": "8:28 a.m.",
+        "headline": "“Why was there no alert?”",
+        "text": "The Chronicle publishes the first detailed account of the destruction of multiple neighborhoods in Santa Rosa. Reporter Jill Tucker continues to hear reports from confused and angry residents that The Chronicle will investigate into the coming weeks: Many received little or no official warning of the disaster that was heading their way."
+      }
+
+    ]}) %>
+
+
+
+  
+
+    <%= t.include("partials/_text-visual.html", { data: [
+
+      {
+        "timestamp": "8:50 a.m.",
+        "headline": "Impact on vineyards",
+        "text": "Chronicle wine reporter Esther Mobley is the first to publish a story assessing the fires’ impact on the heart of California’s wine industry. She would report from the Wine Country for the rest of the week, publishing 10 stories on the fires’ effects on the famed vineyards of Napa and Sonoma counties and the people whose livelihoods depend on them. At a moment when inaccurate information was rampant on the Internet, her knowledge and connections in the industry provided the most complete and accurate list of wineries that had suffered damage.",
+        "asset":"<img src='//ww4.hdnux.com/photos/70/56/72/14872227/3/1200x0.jpg'>"
+      }
+
+    ]}) %>
+
+
+
+
+
+    <%= t.include("partials/_text-slideshow.html", { data: [
+
+      {
+        "timestamp": "8:50 a.m.",
+        "headline": "A high school left in ruin",
+        "text": "Photographer Gabrielle Lurie documents the extensive damage to Cardinal Newman High School in Santa Rosa. In the days ahead, Chronicle reporter John Shea will be the first to survey the damage first-hand. He and others will publish numerous stories about the school community’s recovery – and follow an emotional playoff run by a football team that includes players whose homes were destroyed.",
+        "slideshow": [
+          {
+            "image": "./assets/photos/tweets/t1.jpg"
+          },
+          {
+            "image": "./assets/photos/tweets/t2.jpg"
+          }
+        ]
+      }
+
+    ]}) %>
+
+
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "9:19 a.m.",
+        "headline": "Landing page launched",
+        "text": "With XX separate stories already posted/numerous stories being reported, The Chronicle creates a landing page containing all wildfires content and removes its paywall so anyone can access it. The page remains active and accessible to this day, a complete archive of reporting from the first hours of the fires, along with investigative stories and follow-up reporting produced since. ",
+        "asset":"<img style='max-width:40px;' src='./assets/photos/landingpage.jpg'>"
+      }
+
+    ]}) %>
+
+
+
+
+
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "9:23 a.m.",
+        "headline": "Neighbors help save Santa Rosa home",
+        "text": "Photographer Mason Trinca follows the advance of flames jumping a ridgeline into the Santa Rosa neighborhood of Rincon Valley. He parks as nearby homes ignite from embers or sheer heat. At 9:20 a.m., two people run up behind him with buckets and begin dousing hot spots around a neighbor’s home. Trinca captures their effort to protect the home in a photo that will appear on the front page the next day.",
+        "asset":"<img src='http://ww3.hdnux.com/photos/66/46/24/14312738/9/1200x0.jpg'>"
+      }
+
+    ]}) %>
+
+
+
+  
+
+    <%= t.include("partials/_text-visual.html", { data: [
+
+      {
+        "timestamp": "10:30 a.m.",
+        "headline": "Interactive fire map publishes",
+        "text": "The Chronicle launches an interactive map – which updates in real time – of the fire areas spread across Northern California. The map, which will go through 22 major revisions, will become the single most-visited element of wildfire-related content on SFChronicle.com. When wildfires break out in Southern California two months later, The Chronicle will apply the technology to tracking those blazes – and once again, the interactive map will be the most visited item on the home page.",
+        "asset":"<img src='./assets/gifs/interactivemap.gif'>"
+      }
+
+    ]}) %>
+
+
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "11:30 a.m.",
+        "headline": "First death is confirmed",
+        "text": "The Mendocino County Sheriff’s Office confirms the first death in the fires. As the toll rises in the coming days, The Chronicle assigns reporters to produce stories on each victim and creates a landing page for all fire obituaries, content that is accessible to this day.",
+        "asset":"<img style='max-width: 300px;' src='./assets/photos/victimspage.jpg'>"
+      }
+
+    ]}) %>
+
+
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "12:31 p.m.",
+        "headline": "Seeking causes",
+        "text": "Reporters David Baker and Rachel Swan report on possible causes of the wildfires, including equipment operated by Pacific Gas and Electric Co. Within days, The Chronicle details how often PG&E’s power lines have sparked wildfires, as well as the company’s record of diverting money from its fire safety program to boost profits. A series of enterprise stories will follow, showing how state regulators dragged their feet on imposing tougher fire-prevention rules for utilities. The Chronicle is also the first and only outlet to send a reporter and photographer to the suspected ignition points of the biggest fires, where they find downed power lines at each spot.",
+        "asset":'<div class="embed-container"><iframe src="//player.vimeo.com/video/238117273" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>'
+      }
+
+    ]}) %>
+
+
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "12:20 p.m.",
+        "headline": "‘What we know’ story launches",
+        "text": "To help readers keep up with the most important information, The Chronicle launches an at-a-glance story, “Wine Country fires: what we know, and what we don’t.” It will be updated all week to reflect the latest on the death toll and missing people, damage to cities and towns, evacuations and more.",
+        "asset":'<img src="//ww3.hdnux.com/photos/66/51/74/14327566/3/1200x0.jpg">'
+      }
+
+    ]}) %>
+
+
+
+
+    <div id="day1"></div>
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "Day 1",
+        "headline": "‘Devastation in Wine Country’",
+        "text": "Throughout the afternoon of Oct. 9, The Chronicle breaks new stories even as it updates earlier posts. Twenty-nine separate stories will be published that first day, including scenes from the Napa Valley and the hard-hit Sonoma County community of Glen Ellen. With reporters still in the field covering the unfolding story, the newsroom produces a print edition that brings everything together, led by a main story that last updates shortly before midnight. The initial day of coverage begins a two-week stretch in which almost no one will have a day off. Other Day 1 stories will document:<br>– A horrific scene in the tiny Mendocino County town of Redwood Valley, where nine people died.<br>– The growing number of injured and the many missing.<br>– Helicopter rescues of rural fire victims.<br>– Doctors who worked to save patients even as their own homes burned.<br>– The impacts on schools and agriculture.<br>– A widower who lost what meant most to him – paintings by his late wife.",
+        "asset":'<img style="max-width: 300px;" src="./assets/photos/day1_a1.jpg">'
+      }
+
+    ]}) %>
+
+
+
+
+    <div id="day2"></div>
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "Day 2",
+        "headline": "‘Disaster Is Relentless’",
+        "text": "Fires will rage for the rest of the week as firefighters struggle to gain containment. Each day, The Chronicle will constantly update the status of the fires. Even as reporters work in multiple fire zones, they and their colleagues in the newsroom begin exploring enterprise angles that will develop into stories that appear only in The Chronicle.<br><br>Among the 37 stories produced on Day 2: <br>– A mainbar reporting the death toll rising to 17 and the fires growing to 115,000 acres, with thousands of firefighters streaming in to try to limit the damage.<br>– The growing fear over the hundreds of people reported missing.<br>– A feature obituary on a Napa couple who died together.<br>– The harrowing escape from fire of Sonoma State University’s president and her husband. <br>– Lessons about grief and recovery from a deadly 1991 blaze in the Oakland hills.",
+        "asset":'<img style="max-width: 300px;" src="./assets/photos/day2_a1.jpg">'
+      }
+
+    ]}) %>
+
+
+
+
+
+    <%= t.include("partials/_text-visual.html", { data: [
+
+      {
+        "timestamp": "Day 2 focus",
+        "headline": "Reconstructing the Tubbs Fire",
+        "text": "Seven reporters hit the field for interviews and comb through records to reconstruct the first hours of the Tubbs Fire, describing how it raced nearly 15 miles from Calistoga into northern Santa Rosa, wiping out whole neighborhoods as well as hotels, stores and restaurants, becoming the most destructive wildfire in California history. The story intensifies questions about a lack of official alerts to residents that would become a major subject of The Chronicle’s reporting.",
+        "asset":'TEZE MODULE'
+      }
+
+    ]}) %>
+
+
+
+
+    <div id="day3"></div>
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "Day 3",
+        "headline": "‘Calamity Is Widening’",
+        "text": "As the death toll rises to 23, and with 22 active fires having destroyed more than 3,500 homes and businesses, new areas are threatened. The Chronicle publishes or updates 48 stories. The coverage includes:<br>– The spread of flames toward previously untouched cities, including Napa and the historic mission town of Sonoma.<br>– The middle-of-the-night evacuation of the entire resort town of Calistoga.<br>– The revelation that state investigators are probing whether PG&E power lines caused the fires.<br>– The somber search for a Santa Rosa man later confirmed dead.<br>– The threats to health as smoke sickens people across the region.<br>– The aftermath of heavy damage at two wineries.",
+        "asset":'<img style="max-width: 300px;" src="./assets/photos/day3_a1.jpg">'
+      }
+
+    ]}) %>
+
+
+
+
+
+    <%= t.include("partials/_text-visual.html", { data: [
+
+      {
+        "timestamp": "Day 3 focus",
+        "headline": "Why no alerts?",
+        "text": "Reporters Joaquin Palomino and Kimberly Veklerov report exclusively that in the first hours of the fires, Sonoma County officials decided against sending a mass alert via a federal warning system to cell phones in the region. It is the first of more than a dozen investigative reports about the fires that The Chronicle will publish in the first weeks after the fires. This reporting has swift impact: California’s U.S. senators send a letter to the Federal Communications Commission urging upgrades in the Wireless Emergency Alert system. In November, the FCC acts, requiring wireless carriers to take steps to improve the system. Later, The Chronicle would report that 85 percent of the more targeted warning calls Sonoma County did make in the early hours of the fires went unanswered. Soon after, California lawmakers would introduce a bill to create a uniform statewide emergency notification system.",
+        "asset":'TEZE MODULE'
+      }
+
+    ]}) %>
+
+
+
+
+    <div id="day4"></div>
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "Day 4",
+        "headline": "‘Danger Far From Over’",
+        "text": "As recovery teams are finally able to reach the burn zones, the death toll rises to 31. Multiple fires are still burning and threatening communities. The Chronicle publishes or updates 42 stories. Its coverage includes:<br>– A frantic effort to save historic artifacts as flames bear down on a Spanish-era mission in the town of Sonoma.<br>– A dispatch from Mendocino County, where a bar had become an informal evacuation center and place of comfort for people who fled a fire that killed nine people.<br>– How fire danger in Northern California has escalated for years because of extreme weather, global warming, forest management and development in fire-prone areas.<br>– Air quality measurements show the particulate count in the region is comparable to that of the unhealthy air in Beijing.",
+        "asset":'<img style="max-width: 300px;" src="./assets/photos/day4_a1.jpg">'
+      }
+
+    ]}) %>
+
+
+
+
+
+    <%= t.include("partials/_text-visual.html", { data: [
+
+      {
+        "timestamp": "Day 4 focus",
+        "headline": "She died in his arms",
+        "text": "At 6:15 p.m., the Sonoma County Sheriff’s Office names 15 people who died in the fires, the first such list to be made public. By 7 p.m., reporter Erin Allday reaches the daughter and son-in-law of one of them. Carmen Berriz, 75, had died in the arms of her husband after the couple took refuge from the flames in the swimming pool of their vacation home. Allday’s compelling story of the tragedy goes online at 10:34 p.m. and appears on the next day’s front page. It has been read online by more than 970,000 people.",
+        "asset":'TEZE MODULE'
+      }
+
+    ]}) %>
+
+
+
+
+    <div id="day5"></div>
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "Day 5",
+        "headline": "‘Taking Stock of the Damage’",
+        "text": "Seventeen fires are still burning. The 9,000 firefighters on the lines are finally making some progress, but the damage is already staggering: At least 5,700 homes have been lost across 330 square miles. Thirty-five people are known to have died. The Chronicle publishes or updates 41 stories. The coverage includes:<br>– Fire zones bracing for renewed bad weather – hot, dry winds.<br>– A portrait of life inside one of the 43 shelters where evacuees were asking: How long will I be here?<br>– Grand juries in three counties hit by fire had raised concerns about whether the areas were prepared for a major blaze.<br>– The grim search for remains at a mobile home park in Santa Rosa.<br>– The growing realization that rebuilding will take years.<br>– A state Highway Patrol officer lauded for her personal touch at a checkpoint outside an evacuated neighborhood.<br>– A photo essay documenting mementoes being salvaged from the ruins of homes in Santa Rosa.",
+        "asset":'<img style="max-width: 300px;" src="./assets/photos/day5_a1.jpg">'
+      }
+
+    ]}) %>
+
+
+    <%= t.include("partials/_text-visual.html", { data: [
+
+      {
+        "timestamp": "Day 5 focus",
+        "headline": "Digging into PG&E",
+        "text": "Reporter David Baker explores whether PG&E’s fire-safety efforts may have fallen short. Baker would later introduce readers to a utility device called a recloser, which automatically sends a pulse of electricity through a line that appears to have stopped working. He reports that reclosers have been blamed for sparking past wildfires, prompting other utilities not to use them during “fire weather.” PG&E hadn’t adopted that practice, he reports, and most of its reclosers were active the night the fires broke out.",
+        "asset":'TEZE MODULE'
+      }
+
+    ]}) %>
+    
+
+    <div id="day6"></div>
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "Day 6",
+        "headline": "‘From a spark to an inferno’",
+        "text": "Nearly a week into the fires, The Chronicle is engaged on two fronts: following the continuing firefight around the clock and producing a 3,700-word reconstruction of the first hours of the disaster, using material that eight reporters have spent days gathering as they also covered breaking news. One of those reporters, Marissa Lang, and photographer Carlos Avila Gonzalez are coming off an all-night shift alongside firefighters who defended the resort town of Calistoga from a ferocious new surge of the Tubbs Fire. The result is a Sunday front page that features both reports, as well as the definitive assessment of the impact of the fires on California’s wine industry by reporter Esther Mobley. In print and online, The Chronicle publishes or updates 28 separate stories.",
+        "asset":'<img style="max-width: 300px;" src="./assets/photos/day6_a1.jpg">'
+      }
+
+    ]}) %>
+
+
+    <div id="future"></div>
+
+    <%= t.include("partials/_image-notext.html", { data: [
+
+      {
+        "timestamp": "",
+        "headline": "Front pages",
+        "text": "",
+        "asset":'<img src="./assets/graphics/fire_front_pages.jpg">'
       }
 
     ]}) %>
@@ -280,6 +557,30 @@
 
 
     <%= t.include("partials/_footer.html") %>
+    <script>var chatMessages = [{
+
+  name: "ms1",
+  msg: "Huge fires in Napa and Sonoma counties burn structures, force evacuations, close hospitals",
+  delay: 300,
+  align: "left",
+  time: "Monday, Oct. 9, 5:14 a.m."
+},
+{
+
+  name: "ms2",
+  msg: "North Bay fires: See a list of areas being evacuated and the locations of evacuation centers",
+  delay: 300,
+  align: "left",
+  time: "Monday, Oct. 9, 6:19 a.m."
+},
+{
+  name: "ms3",
+  msg: "Public schools closed in several cities, including Napa, Santa Rosa and Petaluma, Due to North Bay Fires",
+  delay: 300,
+  align: "left",
+  time: "Monday, Oct. 9, 6:52 a.m."
+}
+                   ];</script>
     <script src="app.js" async></script>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     <%= t.include("partials/_helloSFC.html") %>

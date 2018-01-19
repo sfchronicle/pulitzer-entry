@@ -1,0 +1,23 @@
+<% data.forEach(function(d) { %>
+
+<div class="section">
+
+  <div class="section-text">
+    <div class="timestamp"><%= d.timestamp %></div>
+    <div class="event"><%= d.headline %></div>
+    <p><%= d.text %></p>
+  </div>
+
+  <div class="section-asset">
+    <div class='quote'>
+      <div class='huge-quote'>“</div>
+      <span class="quote-text">
+        <%= d.asset %>
+        <span class='small-quote'> ”</span>
+      </span>
+    </div>
+  </div>
+
+</div>
+
+<% }); %>

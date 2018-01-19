@@ -180,7 +180,7 @@ progress {
   width: 100%;
   height: .25em;
 
-  /* Reset the apperance */  
+  /* Reset the apperance */
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -207,6 +207,7 @@ progress::-moz-progress-bar {
   background-color: red;
 }
 
+<<<<<<< HEAD
 
 #wrapper {
   width: 100%;
@@ -305,3 +306,49 @@ progress::-moz-progress-bar {
   display:none;
 }
 
+=======
+.quote {
+  position: relative;
+  @media @mobile {
+    padding-left: 10px;
+    padding-top: 30px;
+  }
+}
+
+.huge-quote {
+  position: absolute;
+  line-height:1;
+  font-family: @body;
+  font-size: 160px;
+  color: red;
+  height: 80px;
+  width: 120px;
+  @media @mobile {
+    font-size: 160px;
+    top: -10px;
+    left: -10px;
+  }
+}
+.small-quote {
+  font-family: @body;
+  color: red;
+}
+.quote-text {
+  display: block;
+  font-style: italic;
+  color: @dark-gray;
+  padding-left: 80px;
+  padding-top: 40px;
+  @media @mobile {
+    display:inline;
+    padding-left: 60px;
+  }
+}
+
+.emphasis {
+  font-family: @banner;
+  text-transform: uppercase;
+  color: red;
+  font-weight: 800;
+}
+>>>>>>> updated quote style and highlight style

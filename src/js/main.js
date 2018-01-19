@@ -114,3 +114,25 @@ function alerts() {
 }
 
 alerts();
+
+
+// show the about the data box
+var timestamp_buttons = document.getElementsByClassName("timestamp-link");
+for (var tidx=0; tidx < timestamp_buttons.length; tidx++){
+  timestamp_buttons[tidx].addEventListener("click",function(t) {
+    document.getElementById("aboutthedata-box").classList.add("active");
+    document.getElementById("aboutthedata-overlay").classList.add("active");
+    $('body').addClass('noscroll');
+    console.log(t.target.id.split("t")[1]);
+    $("#img"+t.target.id.split("t")[1]).addClass("showme");
+  });
+};
+
+
+// hide the about the data box
+document.getElementById("close-data-box").addEventListener("click",function() {
+  document.getElementById("aboutthedata-box").classList.remove("active");
+  document.getElementById("aboutthedata-overlay").classList.remove("active");
+  $('body').removeClass('noscroll');
+  $(".img").removeClass("showme");
+});

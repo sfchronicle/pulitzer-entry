@@ -1,0 +1,38 @@
+<% var timestamps = ["12:06 a.m.","12:18 a.m.","12:25 a.m.","12:55 a.m.","1:02 a.m.","1:18 a.m.","1:27 a.m.","1:46 a.m.","1:50 a.m.","2:00 a.m.","2:20 a.m.","2:26 a.m.","2:29 a.m.","2:34 a.m.","2:39 a.m."] %>
+
+<% data.forEach(function(d) { %>
+
+<div class="section allstories">
+
+  <div class="section-text">
+    <div class="timestamp"><%= d.timestamp %></div>
+    <div class="event"><%= d.headline %></div>
+    <p><%= d.text %></p>
+  </div>
+
+  <div class="section-asset">
+    <%= d.asset %>
+  </div>
+</div>
+
+<% if (d.timestamp == "BEFORE MIDNIGHT") { %>
+  <div class="timestamp-explainer">Read the first 31 updates by clicking on the buttons below:</div>
+  <div class="timestamp-wrapper">
+    <% for (var idx=0; idx < timestamps.length; idx++){ %>
+      <div class="timestamp-link" id="t<%=idx%>"><%=timestamps[idx]%></div>
+    <% } %>
+  </div>
+<% } %>
+
+
+
+<% }); %>
+
+<div class="overlay-aboutthedata" id="aboutthedata-overlay">
+  <div class="aboutthedata-box" id="aboutthedata-box">
+    <div class="close-button" id="close-data-box"><i class="fa fa-times" aria-hidden="true"></i></div>
+    <% for (var idx=0; idx < timestamps.length; idx++){ %>
+      <div class="img" id="img<%=idx%>"><img src="http://ww4.hdnux.com/photos/70/56/72/14872227/3/1200x0.jpg"></img></div>
+    <% } %>
+  </div>
+</div>

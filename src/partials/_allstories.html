@@ -1,4 +1,4 @@
-<% var timestamps = ["12:06 a.m.","12:18 a.m.","12:25 a.m.","12:55 a.m.","1:02 a.m.","1:18 a.m.","1:27 a.m.","1:46 a.m.","1:50 a.m.","2:00 a.m.","2:20 a.m.","2:26 a.m.","2:29 a.m.","2:34 a.m.","2:39 a.m."] %>
+<% var timestamps = ["12:06 a.m.","12:18 a.m.","12:25 a.m.","12:55 a.m.","1:02 a.m.","1:18 a.m.","1:27 a.m.","1:46 a.m.","1:50 a.m.","2:00 a.m.","2:20 a.m.","2:26 a.m.","2:29 a.m.","2:34 a.m.","2:39 a.m."   ,"2:52 a.m.","3:18 a.m.","3:38 a.m.","4:04 a.m.","4:11 a.m.","4:12 a.m.","4:57 a.m.","5:03 a.m.","5:36 a.m.","5:44 a.m.","6:05 a.m.","6:11 a.m.","7:09 a.m.","7:34 a.m.","7:44 a.m.","8:00 a.m."] %>
 
 <% data.forEach(function(d) { %>
 
@@ -32,7 +32,7 @@
   <div class="aboutthedata-box" id="aboutthedata-box">
     <div class="close-button" id="close-data-box"><i class="fa fa-times" aria-hidden="true"></i></div>
     <% for (var idx=0; idx < timestamps.length; idx++){ %>
-      <div class="img" id="img<%=idx%>"><img src="http://ww4.hdnux.com/photos/70/56/72/14872227/3/1200x0.jpg"></img></div>
+      <div class="img" id="img<%=idx%>"><img src="./assets/photos/story-updates/<%= idx%>.png"></img></div>
     <% } %>
   </div>
 </div>

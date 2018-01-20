@@ -102,7 +102,36 @@
   font-weight: 800;
   font-size: 14px;
   padding: 10px 0;
+  @media @mobile {
+    display: none;
+  }
   // font-style: italic;
+}
+
+.select-text {
+  text-align: center;
+  color: @dark-gray;
+  font-family: @banner;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 10px 0;
+  display: none;
+  @media @mobile {
+    display: block;
+  }
+}
+
+select {
+  display: none;
+  width: 250px;
+  height: 30px;
+  margin: auto;
+  border: 2px red solid;
+  color: red;
+  font-weight: 800;
+  @media @mobile {
+    display: block;
+  }
 }
 
 .timestamp-wrapper {
@@ -113,6 +142,9 @@
   margin: auto;
   @media @tablet-horiz {
     margin: 0 10px;
+  }
+  @media @mobile {
+    display: none;
   }
   .timestamp-link {
     color: red;

@@ -129,6 +129,14 @@ for (var tidx=0; tidx < timestamp_buttons.length; tidx++){
   });
 };
 
+var select_race = document.getElementById("select-update");
+select_race.addEventListener("change",function(){
+  console.log("CHANGE");
+  document.getElementById("aboutthedata-box").classList.add("active");
+  document.getElementById("aboutthedata-overlay").classList.add("active");
+  $('body').addClass('noscroll');
+  $("#img0").addClass("showme");
+});
 
 // hide the about the data box
 document.getElementById("close-data-box").addEventListener("click",function() {

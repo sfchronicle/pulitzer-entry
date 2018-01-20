@@ -15,15 +15,20 @@
   </div>
 </div>
 
-<% if (d.timestamp == "BEFORE MIDNIGHT") { %>
-  <div class="timestamp-explainer">Read the first 31 updates by clicking on the buttons below:</div>
-  <div class="timestamp-wrapper">
+<div class="timestamp-explainer">Read the first 31 updates by clicking on the buttons below:</div>
+<div class="timestamp-wrapper">
+  <% for (var idx=0; idx < timestamps.length; idx++){ %>
+    <div class="timestamp-link" id="t<%=idx%>"><%=timestamps[idx]%></div>
+  <% } %>
+</div>
+<div class="drop-down mobile">
+  <div class="select-text">Read one of the first 31 updates by selecting below:</div>
+  <select name="select" id="select-update">
     <% for (var idx=0; idx < timestamps.length; idx++){ %>
-      <div class="timestamp-link" id="t<%=idx%>"><%=timestamps[idx]%></div>
-    <% } %>
-  </div>
-<% } %>
-
+      <option value='select<%=idx%>' class="option"><%=timestamps[idx]%></option>
+    <% }; %>
+  </select>
+</div>
 
 
 <% }); %>

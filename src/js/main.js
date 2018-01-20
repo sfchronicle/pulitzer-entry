@@ -21,12 +21,14 @@ $(window).scroll(function () {
   var position = scrollPercent;
 
   // console.log(s);
-  if (s > 0) {
-    $('#fixednav').fadeIn(800)
-    $("#fixednav").css("visibility","visible");
-  } else {
-    $('#fixednav').fadeOut(800)
-    $("#fixednav").css("visibility","hidden");
+  if (screen.width > 340){
+    if (s > 0) {
+      $('#fixednav').fadeIn(800)
+      $("#fixednav").css("visibility","visible");
+    } else {
+      $('#fixednav').fadeOut(800)
+      $("#fixednav").css("visibility","hidden");
+    }
   }
 
   $("progress").attr('value', position);

@@ -576,10 +576,12 @@ progress::-moz-progress-bar {
 
 .before-after{
   .display-flex;
-  max-width: 1100px;
+  max-width: 600px;
   margin: 0 auto;
-  .justify-content(space-between);
   padding:50px 20px 70px;
+  font-family: @banner;
+  color: red;
+  font-size: 15px;
 
   @media @mobile{
     .flex-direction(column);
@@ -588,9 +590,23 @@ progress::-moz-progress-bar {
 
 .before{
   .flex(0 0 50%);
-  max-width:400px;
+  padding:0 10px;
+
+  img{
+    border: 1px solid #9c9c9c;
+  }
 }
 
 .after{
   .flex(0 0 50%);
+  padding:0 10px;
+
+  img{
+    border: 1px solid #9c9c9c;
+  }
+}
+
+.gif-border{
+  border:1px solid #ccc;
+  max-width:400px;
 }

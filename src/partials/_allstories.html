@@ -24,6 +24,7 @@
 <div class="drop-down mobile">
   <div class="select-text">Read one of the first 31 updates by selecting below:</div>
   <select name="select" id="select-update">
+    <option disabled selected value> -- select a time -- </option>
     <% for (var idx=0; idx < timestamps.length; idx++){ %>
       <option value='select<%=idx%>' class="option"><%=timestamps[idx]%></option>
     <% }; %>
@@ -37,7 +38,7 @@
   <div class="aboutthedata-box" id="aboutthedata-box">
     <div class="close-button" id="close-data-box"><i class="fa fa-times" aria-hidden="true"></i></div>
     <% for (var idx=0; idx < timestamps.length; idx++){ %>
-      <div class="img" id="img<%=idx%>"><img src="./assets/photos/story-updates/<%= idx%>.png"></img></div>
+      <div class="img" id="img<%=idx%>"><div class="timestamp-hed" id="hed<%=idx%>"><%=timestamps[idx]%></div><img src="./assets/photos/story-updates/<%= idx%>.png"></img></div>
     <% } %>
   </div>
 </div>

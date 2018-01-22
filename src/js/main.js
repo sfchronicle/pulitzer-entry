@@ -124,18 +124,16 @@ for (var tidx=0; tidx < timestamp_buttons.length; tidx++){
     document.getElementById("aboutthedata-box").classList.add("active");
     document.getElementById("aboutthedata-overlay").classList.add("active");
     $('body').addClass('noscroll');
-    console.log(t.target.id.split("t")[1]);
     $("#img"+t.target.id.split("t")[1]).addClass("showme");
   });
 };
 
 var select_race = document.getElementById("select-update");
 select_race.addEventListener("change",function(){
-  console.log("CHANGE");
   document.getElementById("aboutthedata-box").classList.add("active");
   document.getElementById("aboutthedata-overlay").classList.add("active");
   $('body').addClass('noscroll');
-  $("#img0").addClass("showme");
+  $("#img"+$(this).val().split("select")[1]).addClass("showme");
 });
 
 // hide the about the data box

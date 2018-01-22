@@ -95,6 +95,19 @@
   }
 }
 
+.timestamp-hed {
+  color: red;
+  font-family: @banner;
+  font-size: 14px;
+  font-weight: 800;
+  padding-left: 70px;
+  @media @mobile {
+    padding-left: 12%;
+    padding-bottom: 5px;
+    font-size: 11px;
+  }
+}
+
 .timestamp-explainer {
   font-family: @block-graphics;
   font-size: 14px;
@@ -125,9 +138,10 @@ select {
   width: 250px;
   height: 30px;
   margin: auto;
-  border: 2px red solid;
-  color: red;
+  // border: 2px red solid;
+  color: #000;
   font-weight: 800;
+  box-shadow: 2px 2px 2px 0px #bbbbbb;
 
   @media @mobile {
     display: block;
@@ -487,6 +501,7 @@ progress::-moz-progress-bar {
   text-align: left;
   background: white;
   padding: 20px;
+  padding-bottom: 50px;
   border: 1px solid @dark-gray;
   z-index: 2000;
   margin:auto;

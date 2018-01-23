@@ -157,3 +157,11 @@ document.getElementById("close-data-box").addEventListener("click",function() {
   $('body').removeClass('noscroll');
   $(".img").removeClass("showme");
 });
+
+window.addEventListener('load', function() {
+  var elements = document.getElementsByClassName('js-flickity');
+  for (var i = 0; i < elements.length; i++) {
+    var flkty = Flickity.data(elements[i]);
+    flkty.resize();
+  }
+});

@@ -12,7 +12,7 @@
 		  <% data[0].slideshow.forEach(function(slide) { %>
 
 		   <div class="carousel-cell">
-		    <img src="<%= slide.image %>">
+		    <%= slide.image %>
         <div class="caption"><%= slide.caption %> <span class="byline"><%= slide.credit %></span></div>
 		  </div>
 

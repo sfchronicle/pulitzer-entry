@@ -128,6 +128,20 @@ for (var tidx=0; tidx < timestamp_buttons.length; tidx++){
   });
 };
 
+document.getElementById("read229am").addEventListener("click",function(t) {
+  document.getElementById("aboutthedata-box").classList.add("active");
+  document.getElementById("aboutthedata-overlay").classList.add("active");
+  $('body').addClass('noscroll');
+  $("#img12").addClass("showme");
+});
+
+document.getElementById("read503am").addEventListener("click",function(t) {
+  document.getElementById("aboutthedata-box").classList.add("active");
+  document.getElementById("aboutthedata-overlay").classList.add("active");
+  $('body').addClass('noscroll');
+  $("#img22").addClass("showme");
+});
+
 var select_race = document.getElementById("select-update");
 select_race.addEventListener("change",function(){
   document.getElementById("aboutthedata-box").classList.add("active");

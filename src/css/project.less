@@ -1,3 +1,8 @@
+.navlink{
+  a{
+    color:#000;
+  }
+}
 .frontpagegif {
   max-width: 325px;
 
@@ -28,7 +33,7 @@ p a{
   .flex(0 0 50%);
 
   .title{
-    max-width:600px;
+    max-width:730px;
     line-height:1;
     padding:50px 0 0;
     width:90%;
@@ -65,6 +70,7 @@ p a{
   margin:0 auto;
   padding:0;
   font-size:14px;
+  max-width:730px;
   font-family:@block-graphics;
 }
 
@@ -73,6 +79,7 @@ p a{
   font-size:14px;
   margin: 0 auto 10px;
   padding:0;
+  max-width:730px;
   font-family:@block-graphics;
 }
 .intro-img{
@@ -355,7 +362,7 @@ progress {
   background-color: transparent;
 
   /* For IE10+, color of the progress bar */
-  color: red;
+  color: @redlinks;
 }
 
 progress::-webkit-progress-bar {
@@ -363,11 +370,11 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: red;
+  background-color: @redlinks;
 }
 
 progress::-moz-progress-bar {
-  background-color: red;
+  background-color: @redlinks;
 }
 
 

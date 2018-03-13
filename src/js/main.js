@@ -54,7 +54,8 @@ $(document).on('click', 'a[href^="#"]', function(e) {
     var pos = $(id).offset().top;
 
     // animated top scrolling
-    $('body, html').animate({scrollTop: pos});
+    //$('body, html').animate({scrollTop: pos});
+    window.scrollTo(0, pos);
 });
 
 
@@ -74,7 +75,6 @@ var navDisplay = function() {
       navIDX = i;
     }
   }
-  console.log(navIDX);
   if (navIDX > -1){
     $("#"+scrolllist[navIDX]+"nav").addClass("activelink");
   }
@@ -124,7 +124,8 @@ for (var tidx=0; tidx < timestamp_buttons.length; tidx++){
     document.getElementById("aboutthedata-box").classList.add("active");
     document.getElementById("aboutthedata-overlay").classList.add("active");
     $('body').addClass('noscroll');
-    $("#img"+t.target.id.split("t")[1]).addClass("showme");
+    var $image = $("#img"+t.target.id.split("t")[1]).addClass("showme").find('img');
+    $image.attr('src', $image.data('img-src'));
   });
 };
 
